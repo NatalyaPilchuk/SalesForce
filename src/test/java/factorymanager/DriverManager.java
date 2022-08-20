@@ -29,4 +29,8 @@ public abstract class DriverManager {
     public void quitDriver() {
         driver.quit();
     }
+
+    public void startMaximise() {
+        driver.manage().window().maximize();
+    }
 }

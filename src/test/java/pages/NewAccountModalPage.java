@@ -5,6 +5,7 @@ import constants.Credentials;
 import elements.Description;
 import elements.DropDownList;
 import elements.TextInput;
+import io.qameta.allure.Step;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -20,6 +21,7 @@ public class NewAccountModalPage extends BasePage {
         super(driver);
     }
 
+    @Step("Filling account form")
     public void fillInAccountForm(NewAccountModel newAccount) {
         LOGGER.debug(String.format("Attempt to send account name: %s", newAccount.getAccountName()));
         driver.findElement(ACCOUNT_NAME_INPUT).sendKeys(newAccount.getAccountName());

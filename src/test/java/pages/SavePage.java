@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -14,6 +15,7 @@ public class SavePage extends BasePage {
         super(driver);
     }
 
+    @Step("Check if we have the same account name")
     public String getText() {
         LOGGER.debug(String.format("Attempt to find account name :%s", driver.findElement(SAVE_ACCOUNT).getText()));
         return driver.findElement(SAVE_ACCOUNT).getText();
